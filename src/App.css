@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+code {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+  min-height: 3em;
+  background-color: purple;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  margin-left: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header ul {
+  list-style: none;
+  text-decoration: none;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+
+}
+
+header ul li a {
+  margin-left: 2em;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.7;
+  padding: 1em;
+}
+
+header ul li a:hover {
+  opacity: 1;
+  background-color: #BA68C8;
+}
+
+header .menu,
+header .close {
+  cursor: pointer;
+  margin-right: 5%;
+  text-transform: uppercase;
+  background-color: #ffffff00;
+  padding: 1em;
+  color: white;
+  display: none;
+}
+
+header .close {
+  right: 0;
+  top:10px;
+  position: absolute;
+  border-radius: 5px;
+}
+main {
+  min-height: 100vh;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./bacground.jpg) no-repeat center center fixed; ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+}
+@media (max-width:750px) {
+  header .logo,
+  header ul {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 3em;
+  }
+  
+}
+@media (max-width:500px) {
+  header ul {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #BA68C8;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99;
+    transition: 0.5s linear;
+  }
+  header ul.toggle {
+    left: 0;
+  }
+  header ul li {
+    line-height: normal;
+  }
+  header .menu,
+  header .close {
+    display: block;
+  }
+  header .logo {
+    width: initial;
+    margin-left: 5%;
+    line-height: 70px;
+  }
+}
+
+.login {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:2;
+  align-items: center;
+  padding: 4em;
+  border-radius: 10px;
+}
+.loginButton {
+  margin-top: 3em;
+}
+.loginPage,
+.recipesPage,
+.homePage,
+.analysisPage
+{
+  min-height: 100vh;
+  width: 100%;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+
+}
